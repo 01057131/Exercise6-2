@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 6-2</title>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            background: #eee;
+            font-family: "cwTeXKai", serif;
+            font-weight: 400;
+            color: #222;
+            font-size: 16px;
+            line-height: 26px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: #fff;
+            margin: 0px auto 0px;
+            box-shadow: 1px 1px 2px #DAD7D7;
+            border-radius: 3px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .full-name {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            color: #ce1616;
+        }
+
+        .first-name {
+            font-weight: 700;
+        }
+
+        .last-name {
+            font-weight: 300;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .email,.command {
+            color: rgb(193, 159, 159);
+            font-weight: 300;
+        }
+
+        .separator {
+            height: 10px;
+            display: inline-block;
+            border-left: 2px solid #999;
+            margin: 0px 10px;
+        }
+
+        .position {
+            font-weight: bolder;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: underline;
+            color: #ce1616;
+            font-size: 20px;
+        }
+
+        .details {
+            line-height: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .section__title {
+            letter-spacing: 2px;
+            color: #ce1616;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .section__list-item {
+            margin-bottom: 40px;
+        }
+
+        .section__list-item:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .left,.right {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .left {
+            width: 60%;
+        }
+
+        .right {
+            text-align: right;
+            width: 39%;
+        }
+
+        .name {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-style: italic;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .skills__item {
+            margin-bottom: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: rgb(193, 159, 159);
+            border-radius: 20px;
+            margin-right: 3px;
+        }
+
+        input:checked+label {
+            background: #ce1616;
+        }
+
+        table,td,th {
+            border-style: solid;
+            border-collapse: collapse;
+            color: #000;
+        }
+
+        .email-val,.command-val{
+            color: #ce1616;
+        }
+
+        .pic{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <div class="container">
+        <div class="header">
+            <div class="full-name">
+                <span class="first-name">血雨探花 --</span>
+                <span class="last-name">花城</span>
+            </div>
+            <div class="contact-info">
+                <span class="email">Email: </span>
+                <span class="email-val">HuaCheng@gmail.com</span>
+                <span class="separator"></span>
+                <span class="command">通靈口令: </span>
+                <span class="command-val">仙樂太子有求必應</span>
+            </div>
+
+            <div>
+                <img src="花城.jpg" width="60%">
+            </div>
+
+            <div class="about">
+                <span class="position">絕境鬼王 </span>
+                <span>
+                    衣紅勝楓，膚白若雪，右眼戴着一隻黑色眼罩，妖豔動人，銀蝶追逐在衣襟袖間。
+                    幼時為謝憐所救。後在銅爐山蠱城中用了十年破銅爐成為鬼王。
+                    後建立了鬼市，是鬼市城主，非常富有。
+                    謝憐第三次飛昇後與他再遇。
+                    情深義重，為愛成絕，愛人謝憐。
+                </span>
+            </div>
+        </div>
+        <div class="details">
+            <div class="section">
+                <div class="section__title">經歷</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">天生異瞳</div>
+                            <div class="addr">因為右眼是紅色，被視為異類，為人時飽受欺凌。</div>
+                            <div class="duration">花城十歲前</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">人類</div>
+                            <div>生無可戀</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">上元祭天遊行期間跳牆</div>
+                            <div class="addr">在十歲那年有天被打得受不了，想在上元祭天遊行期間跳牆自殺，卻被謝憐接住。</div>
+                            <div class="duration">花城十歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">人類</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">封入花燈</div>
+                            <div class="addr">仙樂國與永安國交戰之際，進入軍隊為謝憐效忠，之後為謝憐戰死，死後魂魄被假道士抓走封入花燈。</div>
+                            <div class="duration">花城十三歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">魂魄</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">化為鬼火</div>
+                            <div class="addr">封入花燈被拿去賣錢時，被戰敗後落魄的謝憐買下放生，卻心存執念不肯離去，以鬼火的形態留在了人間。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">鬼火</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">化為厲鬼</div>
+                            <div class="addr">此後一直悄悄跟着謝憐，眼見謝憐被百劍穿心，在極度痛苦之下化為厲鬼，有了人形。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">厲鬼</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">魂消魄散</div>
+                            <div class="addr">原本謝憐計畫召喚亡靈向永安國復仇，可最終選擇堅守本心，不惜一切中斷時，花城主動替他承受亡靈的反噬詛咒，面對魂消魄散的結局。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">無名黑衣亡魂</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">挖眼</div>
+                            <div class="addr">他的殘魂飄到銅爐山，幫助一群活人逃了許多天，卻還是被萬鬼圍堵逼進死路，此時他突然發狂挖了自己的一隻眼睛，以此為代價煉出了彎刀厄命，扛過了萬鬼圍堵。
+                            </div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">殘魂</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">建立鬼市</div>
+                            <div class="addr">花城在銅爐山修煉成"絕"後，一邊發展勢力，建立鬼市成為鬼市之主，一邊一直在尋找謝憐。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">絕境鬼王</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">贈信物</div>
+                            <div class="addr">八百年後，在謝憐第三次飛升後，與謝憐重逢，並把自己的骨灰，製成戒指贈予謝憐。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">絕境鬼王</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">化作萬千銀蝶</div>
+                            <div class="addr">在謝憐與仙樂滅國的幕後主使戰鬥之際，渡給謝憐大量法力，助謝憐打破咒枷、直面敵人，謝憐雖然以險招取勝，但花城因法力透支而化為萬千銀蝶散去。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">萬千銀蝶</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">上元節重逢</div>
+                            <div class="addr">一年後花城重塑肉身，二人在上元節重逢，至此佳偶天成、深情雋永。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">絕境鬼王</div>
+                            <div>為謝憐而活</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">知名戰績</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">向上天庭的35位神官下了戰書</div>
+                            <div class="addr">有33位神官不以為然，欣然應戰，最終慘敗；而剩下2位沒有應戰，恰巧逃過一劫。</div>
+                            <div class="duration">未詳細記載年歲</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">大獲全勝</div>
+                            <div>神官信徒改供俸花城</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">能力</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="name">擅長更換皮相，化出的皮相天衣無縫，與常人無異</div>
+                        <div class="text">從不以真容示眾，頻頻地更換皮相，導致連鬼市群鬼都弄不清他到底長什麼樣。</div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="name">能言善辯，博文廣識</div>
+                        <div class="text">
+                            上天入地道古論今，時而斯文，時而惡毒，時而強硬，時而精闢，時而詭辯，當真是，鋼牙利齒滴水不漏，旁徵博引妖言惑眾。數位文神被他從天罵到地、從古罵到今，氣得一口血瀑直衝雲霄。</div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="name">縱運之法了得</div>
+                        <div class="text">能控制自身的氣運，也可以把好運借給別人。</div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="name">精通繪畫和雕刻</div>
+                        <div class="text">筆力絕好，用色清絕豔絕；能將神像的衣褶流線都雕刻的十分精緻。</div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="name">監聽、追蹤、紀錄及定住他人的行動</div>
+                        <div class="text">可製造並操縱死靈蝶，作監聽、控制他人之用，還能錄製與播放畫面。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">人際關係</div>
+                <div class="skills">
+                    <div class="skills__item">
+                        <div class="left">
+                            <div class="name">謝憐</div>
+                        </div>
+                        <div class="right">
+                            <input id="ck1" type="checkbox" checked />
+                            <label for="ck1"></label>
+
+                            <input id="ck2" type="checkbox" checked />
+                            <label for="ck2"></label>
+
+                            <input id="ck3" type="checkbox" checked />
+                            <label for="ck3"></label>
+
+                            <input id="ck4" type="checkbox" checked />
+                            <label for="ck4"></label>
+
+                            <input id="ck5" type="checkbox" checked />
+                            <label for="ck5"></label>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">其他人</div>
+                    </div>
+                    <div class="right">
+                        <input id="ck1" type="checkbox" />
+                        <label for="ck1"></label>
+
+                        <input id="ck2" type="checkbox" />
+                        <label for="ck2"></label>
+
+                        <input id="ck3" type="checkbox" />
+                        <label for="ck3"></label>
+
+                        <input id="ck4" type="checkbox" />
+                        <label for="ck4"></label>
+
+                        <input id="ck5" type="checkbox" />
+                        <label for="ck5"></label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="section">
+                <div class="section__title">武器</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <table>
+                            <tr>
+                                <th>武器</th>
+                                <th>描述</th>
+                                <th>作用</th>
+                            </tr>
+                            <tr>
+                                <td>彎刀厄命</td>
+                                <td>彎刀的刀柄處，雕着一隻銀眼睛，眼睛的花紋是幾條銀線組成的，雖然簡單卻極為傳神，若有生命</td>
+                                <td>攻擊，助攻</td>
+                            </tr>
+                            <tr>
+                                <td>死靈蝶</td>
+                                <td>晶瑩剔透，雙翼閃閃，美極幽極，在陽光下，彷彿觸手即碎的夢幻泡影</td>
+                                <td>監聽、通訊、錄像、錄音、回放、當武器、照明、帶人飛，定住人的行動</td>
+                            </tr>
+                            <tr>
+                                <td>紅傘</td>
+                                <td>傘面赤紅勝楓，豔烈如火</td>
+                                <td>上可擋刀山，下可過油鍋，殺神利器，可以帶人飛</td>
+                            </tr>
+                            <tr>
+                                <td>金箔扇</td>
+                                <td>扇子小巧精緻，扇骨扇面均是以純金打造，色澤美而沉靜</td>
+                                <td>翻手一扇，一道勁風挾著一排又一排的金箔，片片纖細，鋒芒銳利</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">花城&謝憐</div>
+                <div class="pic"><img src="花城謝憐.jpg" class="pic"></div>
+                <div><a href="https://www.netflix.com/tw/title/81364887" target="_blank">想看天官賜福請點這</a></div>
+            </div>
+            <div class="section">
+                <div class="section__title">天官賜福--第二季--預告</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MXQOM5aoX-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
